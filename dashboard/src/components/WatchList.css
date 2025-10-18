@@ -1,0 +1,101 @@
+.watchlist-container {
+  padding: 20px;
+  background-color: #121212;
+  color: white;
+  border-radius: 10px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search {
+  width: 70%;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.counts {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.watchlist-item {
+  background-color: #1e1e1e;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.3s ease;
+}
+
+.watchlist-item:hover {
+  background-color: #2c2c2c;
+}
+
+.item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.symbol {
+  font-weight: 600;
+  color: #00bcd4;
+  width: 100px;
+}
+
+.price {
+  font-weight: bold;
+  color: #4caf50; /* Highlighted green */
+  width: 100px;
+  text-align: right;
+}
+
+.type {
+  color: #ffb74d;
+  width: 80px;
+  text-align: right;
+}
+
+.actions {
+  margin-top: 8px;
+  display: flex;
+  gap: 8px;
+}
+
+.actions button {
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  transition: 0.2s;
+}
+
+.actions .buy {
+  background-color: #4caf50;
+  color: white;
+}
+
+.actions .sell {
+  background-color: #f44336;
+  color: white;
+}
+
+.actions .action {
+  background-color: #2196f3;
+  color: white;
+}
