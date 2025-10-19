@@ -1,13 +1,32 @@
 :root {
+  --text-color: rgba(255, 255, 255, 0.87);
+  --bg-color: #242424;
+  --link-color: #646cff;
+  --link-hover: #535bf2;
+  --button-bg: #1a1a1a;
+  --button-hover-border: #646cff;
+  --light-text: #213547;
+  --light-bg: #ffffff;
+  --light-button-bg: #f9f9f9;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -15,24 +34,18 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  color: var(--link-color);
+  text-decoration: none;
 }
 a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  color: var(--link-hover);
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 3rem;
+  text-align: center;
   line-height: 1.1;
+  margin-bottom: 1rem;
 }
 
 button {
@@ -42,27 +55,68 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--button-bg);
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: all 0.25s ease;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: var(--button-hover-border);
+  transform: scale(1.03);
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* Layout for your dashboard container */
+#root {
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Example card styling for dashboard components */
+.card {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 0.8rem;
+  }
+}
+
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: var(--light-text);
+    background-color: var(--light-bg);
   }
+
+  button {
+    background-color: var(--light-button-bg);
+  }
+
   a:hover {
     color: #747bff;
   }
-  button {
-    background-color: #f9f9f9;
+
+  .card {
+    background-color: #f3f3f3;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
 }
